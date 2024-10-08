@@ -10,6 +10,9 @@ import { setupCursorHover } from '../../.widgetutils/cursorhover.js';
 
 import { distroID, isArchDistro, isDebianDistro, hasFlatpak } from '../../.miscutils/system.js';
 
+const dark = "/home/evan/Pictures/Pictures/Wallpaper/Dark/"
+const anime = "/home/evan/Pictures/Pictures/Wallpaper/Aniwall/"
+
 const scripts = [
     {
     	icon: 'desktop-symbolic',
@@ -58,6 +61,30 @@ const scripts = [
         name: 'Uninstall unused flatpak packages',
         command: `flatpak uninstall --unused`,
         enabled: hasFlatpak,
+    },
+    {
+        icon: 'arch-symbolic',
+        name: 'Trim pnpm Packages',
+        command: `pnpm store prune`,
+        enabled: isArchDistro,
+    },
+    {
+        icon: 'arch-symbolic',
+        name: 'Clean pacman and yay cache',
+        command: `yay -Scc --noconfirm`,
+        enabled: isArchDistro,
+    },
+    {
+        icon: 'ai-oxygen-symbolic',
+        name: 'Random Dark Wallpaper',
+        command: `${App.configDir}/scripts/color_generation/randomwall.sh ${dark}`,
+        enabled: isArchDistro,
+    },
+    {
+        icon: 'ai-zukijourney',
+        name: 'Random Anime Wallpaper',
+        command: `${App.configDir}/scripts/color_generation/randomwall.sh ${anime}`,
+        enabled: isArchDistro,
     },
 ];
 

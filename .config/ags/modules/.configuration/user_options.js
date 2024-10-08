@@ -135,20 +135,20 @@ let configOptions = {
         'dateFormat': "%d/%m", // On notif time
     },
     'weather': {
-        'city': "",
+        'city': "kathmandu",
         'preferredUnit': "C", // Either C or F
     },
     'workspaces': {
         'shown': 10,
     },
     'dock': {
-        'enabled': false,
+        'enabled': true,
         'hiddenThickness': 5,
-        'pinnedApps': ['firefox', 'org.gnome.Nautilus'],
+        'pinnedApps': ['intellij-idea-ultimate-edition', 'org.gnome.Nautilus'],
         'layer': 'top',
         'monitorExclusivity': true, // Dock will move to other monitor along with focus if enabled
         'searchPinnedAppIcons': false, // Try to search for the correct icon if the app class isn't an icon name
-        'trigger': ['client-added', 'client-removed'], // client_added, client_move, workspace_active, client_active
+        'trigger': [''], // client_added, client_move, workspace_active, client_active
         // Automatically hide dock after `interval` ms since trigger
         'autoHide': [
             {

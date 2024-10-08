@@ -16,6 +16,15 @@ const PROVIDERS = Object.assign({ // There's this list hmm https://github.com/zu
         'key_file': 'openai_key.txt',
         'model': 'gpt-3.5-turbo',
     },
+    'openai-4-turbo': {
+        'name': 'Gpt-4 Turbo',
+        'logo_name': 'openai-symbolic',
+        'description': 'Official OpenAI API.\nPricing: Free for the first $5 or 3 months, whichever is less.',
+        'base_url': 'https://api.openai.com/v1/chat/completions',
+        'key_get_url': 'https://platform.openai.com/api-keys',
+        'key_file': 'openai_key.txt',
+        'model': 'gpt-4-turbo',
+    },
     'ollama': {
         'name': 'Ollama (Llama 3)',
         'logo_name': 'ollama-symbolic',

@@ -31,7 +31,7 @@ const initMessages =
 
 if (!fileExists(`${GLib.get_user_config_dir()}/gemini_history.json`)) {
     Utils.execAsync([`bash`, `-c`, `touch ${GLib.get_user_config_dir()}/gemini_history.json`]).catch(print);
-    Utils.writeFile('[ ]', `${GLib.get_user_config_dir()}/gemini_history.json`).catch(print);
+    Utils.writeFile('[]', `${GLib.get_user_config_dir()}/gemini_history.json`).catch(print);
 }
 
 Utils.exec(`mkdir -p ${GLib.get_user_state_dir()}/ags/user/ai`);
@@ -232,6 +232,7 @@ class GeminiService extends Service {
         }
     }
 
+    
     clear() {
         this._messages = this._assistantPrompt ? [...initMessages] : [];
         if (this._usingHistory) this.saveHistory();
